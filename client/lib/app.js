@@ -37,5 +37,9 @@ Push.addListener('message', function(notification) {
 });
 
 
+Push.addListener('token', function(token) {
+  Meteor.call("postParseInstallation", token);
+});
+
 
 
