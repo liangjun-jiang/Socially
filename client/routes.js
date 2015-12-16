@@ -30,4 +30,16 @@ angular.module('socially')
         $state.go('parties');
       }
     });
+
+    //this works but it's ugly
+    Accounts.onLogin(function() {
+      // alert(Meteor.userId());
+      Meteor.call('raix:push-update', Meteor.userId(), function(err, result){
+          if (err) {
+              console.log("ERROR: I am inside raix:push-update call")
+          } else {
+              console.log("Succesfully added: " + result)
+          }
+      });
+    });
   });

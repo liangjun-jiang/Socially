@@ -35,3 +35,4 @@ Push.addListener('message', function(notification) {
   };
   alert(notification.message, alertDismissed, notification.title, "Ok");
 });
+
