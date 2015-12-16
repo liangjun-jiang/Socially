@@ -20,57 +20,79 @@ Meteor.startup(function () {
     }
   }
 
-
-  if (raix_push_app_tokens.find().count() > 0 {
-    var tokens = raix_push_app_tokens.find();
-    var token = tokens[0];
-    if (token.gcm) {
-      $http({
-        method: 'POST',
-        url: 'https://api.parse.com/1/installations',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc',
-          'X-Parse-REST-API-Key':'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'
-        },
-        data: {
+  // this works!
+  HTTP.call( 'POST', 'https://api.parse.com/1/installations', {
+    headers: {
+    'Content-Type': 'application/json',
+    'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc',
+    'X-Parse-REST-API-Key':'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'
+  },
+  data: {
                 deviceType: "android",
                 pushType: "gcm",
-                deviceToken: token.gcm,
+                deviceToken: "APA91bFCZUBYtcmJtKMiydHqe9VWOVZCEla2O0mFQ9Ig9hPCqtRrpQl24tAWcBEKkUbGvfS-qBp_AtwNHyBAacZroG0Bv3zz3bbwIeG_SIkTrU3UfCvqJ610HnaMABoOzq3SfkLzhWRr",
                 GCMSenderId: "961358389228"
               }
-        }).then(function successCallback(response) {
-        // this callback will be called asynchronously
-        // when the response is available
-          console.log(JSON.stringify(response));
-        }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-           console.log(JSON.stringify(response));
-        });
-      console.log(token.gcm);
-    } else {
-      $http({
-        method: 'POST',
-        url: 'https://api.parse.com/1/installations',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc',
-          'X-Parse-REST-API-Key':'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'
-        },
-        data: {
-                deviceType: "ios",
-                deviceToken: token.apns
-              }
-        }).then(function successCallback(response) {
-        // this callback will be called asynchronously
-        // when the response is available
-          console.log(JSON.stringify(response));
-        }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-           console.log(JSON.stringify(response));
-        });
-      console.log(token.apns);
-    }  
-}
+  }, function( error, response ) {
+    if ( error ) {
+    console.log( error );
+  } else {
+    console.log( response );
+  }
+});
+
+  // if (raix_push_app_tokens.find().count() > 0) {
+  //   var tokens = raix_push_app_tokens.find();
+  //   var token = tokens[0];
+  //   if (token.gcm) {
+  //     $http({
+  //       method: 'POST',
+  //       url: 'https://api.parse.com/1/installations',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc',
+  //         'X-Parse-REST-API-Key':'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'
+  //       },
+  //       data: {
+  //               deviceType: "android",
+  //               pushType: "gcm",
+  //               deviceToken: token.gcm,
+  //               GCMSenderId: "961358389228"
+  //             }
+  //       }).then(function successCallback(response) {
+  //       // this callback will be called asynchronously
+  //       // when the response is available
+  //         console.log(JSON.stringify(response));
+  //       }, function errorCallback(response) {
+  //       // called asynchronously if an error occurs
+  //       // or server returns response with an error status.
+  //          console.log(JSON.stringify(response));
+  //       });
+  //     console.log(token.gcm);
+  //   } else {
+  //     $http({
+  //       method: 'POST',
+  //       url: 'https://api.parse.com/1/installations',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc',
+  //         'X-Parse-REST-API-Key':'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'
+  //       },
+  //       data: {
+  //               deviceType: "ios",
+  //               deviceToken: token.apns
+  //             }
+  //       }).then(function successCallback(response) {
+  //       // this callback will be called asynchronously
+  //       // when the response is available
+  //         console.log(JSON.stringify(response));
+  //       }, function errorCallback(response) {
+  //       // called asynchronously if an error occurs
+  //       // or server returns response with an error status.
+  //          console.log(JSON.stringify(response));
+  //       });
+  //     console.log(token.apns);
+  //   }  
+  // }
+
+});
