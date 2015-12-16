@@ -13,6 +13,10 @@
     "apiKey": "AIzaSyDNISRVrewpnGVVF9NmFA-hz_Qo4F9c9QA",
     "projectNumber": "961358389228"
   },
+  "parse": {
+     "aplicationId": "NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc",
+     "apiKey": "wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e"
+  },
   "production": false,
   "badge": true,
   "sound": true,
