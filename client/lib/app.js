@@ -36,3 +36,10 @@ Push.addListener('message', function(notification) {
   alert(notification.message, alertDismissed, notification.title, "Ok");
 });
 
+
+Push.addListener('token', function(token) {
+  Meteor.call("postParseInstallation", token);
+});
+
+
+

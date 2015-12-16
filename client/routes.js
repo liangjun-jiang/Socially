@@ -34,7 +34,6 @@ angular.module('socially')
     //this works but it's ugly
     // todo: don't need to update if we have one (a little bit query needed)
     Accounts.onLogin(function() {
-      // alert(Meteor.userId());
       Meteor.call('raix:push-update', Meteor.userId(), function(err, result){
           if (err) {
               console.log("ERROR: I am inside raix:push-update call")
