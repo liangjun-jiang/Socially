@@ -1,2 +1,2 @@
 App.accessRule("*");
-App.accessRule("*://10.0.2.2:3000/*");
+App.accessRule("*://10.10.20.195:3000/*");

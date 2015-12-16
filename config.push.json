@@ -1,0 +1,21 @@
+{
+  "apn": {
+    "passphrase": "pushchat",
+    "key": "ios/apn-production/PushChatKey.pem",
+    "cert": "ios/apn-production/PushChatCert.pem"
+  },
+  "apn-dev": {
+    "passphrase": "pushchat",
+    "key": "ios/apn-development/PushChatKey.pem",
+    "cert": "ios/apn-development/PushChatCert.pem"
+  },
+  "gcm": {
+    "apiKey": "AIzaSyDNISRVrewpnGVVF9NmFA-hz_Qo4F9c9QA",
+    "projectNumber": "961358389228"
+  },
+  "production": false,
+  "badge": true,
+  "sound": true,
+  "alert": true,
+  "vibrate": true
+}
