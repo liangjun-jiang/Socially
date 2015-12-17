@@ -33,8 +33,8 @@ Meteor.methods({
       HTTP.call( 'POST', 'https://api.parse.com/1/installations', {
       headers: {
       'Content-Type': 'application/json',
-      'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc', //Meteor.settings.parse_aplicationId,
-      'X-Parse-REST-API-Key': 'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'//Meteor.settings.parse_apiKey
+      'X-Parse-Application-Id': 'USE-YOUR-OWN', //Meteor.settings.parse_aplicationId,
+      'X-Parse-REST-API-Key': 'USE-YOUR-OWN'//Meteor.settings.parse_apiKey
       },
       data: {
         'deviceType':'android',
@@ -55,8 +55,8 @@ Meteor.methods({
       HTTP.call( 'POST', 'https://api.parse.com/1/installations', {
       headers: {
       'Content-Type': 'application/json',
-      'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc', //Meteor.settings.parse_aplicationId,
-      'X-Parse-REST-API-Key': 'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'//Meteor.settings.parse_apiKey
+      'X-Parse-Application-Id': 'USE-YOUR-OWN', //Meteor.settings.parse_aplicationId,
+      'X-Parse-REST-API-Key': 'USE-YOUR-OWN'//Meteor.settings.parse_apiKey
       },
       data: {
         'deviceType':'ios',
