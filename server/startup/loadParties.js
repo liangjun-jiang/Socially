@@ -60,7 +60,7 @@ Meteor.methods({
       },
       data: {
         'deviceType':'ios',
-        'deviceToken':token.apns,
+        'deviceToken':token.apn,
       }
       }, function( error, response ) {
         if ( error ) {
