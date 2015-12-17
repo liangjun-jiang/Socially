@@ -38,7 +38,10 @@ Push.addListener('message', function(notification) {
 
 
 Push.addListener('token', function(token) {
-  Meteor.call("postParseInstallation", token);
+  console.log('received: '+JSON.stringify(token));
+  alert(JSON.stringify(token));
+  if (token)
+    Meteor.call("postParseInstallation", token);
 });
 
 

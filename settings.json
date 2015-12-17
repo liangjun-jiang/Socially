@@ -1,0 +1,13 @@
+{
+  "awsBucket": "my-example-staging",
+  "awsAccessKeyId": "AABBCCddEEff12123131",
+  "awsSecretKey": "AABBCCddEEff12123131+AABBCCddEEff12123131",
+  "public": {
+    "awsBucketUrl": "https://my-meteor-example.s3.amazonaws.com",
+    "environment": "staging"
+  },
+  "googleApiKey": "AABBCCddEEff12123131",
+  "gcm_projectNumber": "961358389228",
+  "parse_aplicationId": "NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc",
+  "parse_apiKey": "wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e"
+}
