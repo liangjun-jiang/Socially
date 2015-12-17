@@ -40,7 +40,7 @@ Meteor.methods({
         'deviceType':'android',
         'pushType':'gcm',
         'deviceToken':token.gcm,
-        'GCMSenderId':Meteor.settings.gcm_projectNumber
+        'GCMSenderId':'961358389228'
       }
       }, function( error, response ) {
         if ( error ) {
