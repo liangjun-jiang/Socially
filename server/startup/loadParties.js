@@ -33,17 +33,17 @@ Meteor.methods({
       // pushType: "gcm",
       // deviceToken: "APA91bFCZUBYtcmJtKMiydHqe9VWOVZCEla2O0mFQ9Ig9hPCqtRrpQl24tAWcBEKkUbGvfS-qBp_AtwNHyBAacZroG0Bv3zz3bbwIeG_SIkTrU3UfCvqJ610HnaMABoOzq3SfkLzhWRr",
       // GCMSenderId: "961358389228"
-      HTTP.call( 'POST', 'https://api.parse.com/1/installations', {
+      HTTP.call( 'POST', Meteor.settings.parse_installation_api_endpoint, {
       headers: {
       'Content-Type': 'application/json',
-      'X-Parse-Application-Id': 'NrQTV4aC2LCHicySh2CA0SvxVNKF788j6XcVceMc',
-      'X-Parse-REST-API-Key':'wCx55wj2Nf5EaPKWIEooSj9ZLU0ORDkAKujZQF2e'
+      'X-Parse-Application-Id': Meteor.settings.parse_aplicationId,
+      'X-Parse-REST-API-Key': Meteor.settings.parse_apiKey
       },
       data: {
         'deviceType':'android',
         'pushType':'gcm',
         'deviceToken':token.gcm,
-        'GCMSenderId':'961358389228'
+        'GCMSenderId':Meteor.settings.gcm_projectNumber
       }
       }, function( error, response ) {
         if ( error ) {
